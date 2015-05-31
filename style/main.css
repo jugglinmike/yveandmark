@@ -43,6 +43,10 @@ h1, h2, h3 {
 	font-weight: bold;
 }
 
+ul {
+	list-style-type: none;
+}
+
 main {
 	width: 500px;
 	margin: 0 auto;
@@ -57,9 +61,78 @@ header {
 	text-align: center;
 }
 
-header img {
+header .monogram {
 	width: 400px;
 	margin-bottom: 1em;
+}
+
+header .photo-break {
+	margin: 0;
+}
+
+.photo-break {
+	width: 100%;
+	margin: 3em 0;
+}
+
+.photo-break, .party img {
+	border-width: 1px;
+
+	border-color: #095169;
+	border-style: solid;
+}
+
+nav {
+	font-size: 0.85em;
+	text-align: center;
+	word-spacing: -0.2em;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+	margin-left: 0.6em;
+}
+
+nav li:first-child {
+	margin-left: 0;
+}
+
+.party {
+	width: 49%;
+	display: inline-block;
+}
+
+.party.party-hers {
+	text-align: right;
+}
+
+.party ul {
+	padding: 0;
+}
+
+.party li {
+	margin-bottom: 1em;
+}
+
+.party img {
+	width: 80%;
+}
+
+.party .name {
+	display: block;
+}
+
+.party .rltn {
+	font-size: 0.8em;
+}
+
+p.external-link {
+	text-align: center;
+	word-break: keep-all;
 }
 
 footer {
@@ -84,4 +157,18 @@ footer img {
 
 	border-style: solid;
 	border-color: #095169;
+}
+
+@media all and (max-width: 640px) {
+	.huggers {
+		display: none;
+	}
+
+	h1, h2, h3 {
+		margin-left: 0;
+		margin-right: 0;
+		border-width: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
