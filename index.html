@@ -141,5 +141,32 @@
       </footer>
       <div class="huggers">&nbsp;</div>
     </main>
+
+<script>
+var huggers = document.getElementsByClassName('huggers')[0];
+var min = 300;
+var isFixed = window.scrollY < min;
+
+function placeHuggers() {
+  var fromTop = window.scrollY - min;
+  if (fromTop > 0) {
+    if (isFixed) {
+      return;
+    }
+
+    huggers.style.position = 'fixed';
+    huggers.style.top = '0px';
+    isFixed = true;
+  } else if (isFixed) {
+    huggers.style.position = 'absolute';
+    huggers.style.top = min + 'px';
+    isFixed = false;
+  }
+}
+
+placeHuggers();
+
+document.addEventListener('scroll', placeHuggers);
+</script>
   </body>
 </html>

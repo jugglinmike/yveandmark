@@ -32,12 +32,9 @@ a, a:visited, a:active, a:hover {
 }
 
 h1, h2, h3 {
-	border-width: 0 3px;
-	padding: 0 50px;
-	margin: 0 -50px 1em;
+	margin: 0 0 1em;
 	width: 100%;
 
-	border-style: solid;
 	color: #9fd86b;
 	font-family: sans-serif;
 	font-weight: bold;
@@ -147,29 +144,39 @@ footer img {
 
 .huggers {
 	position: fixed;
-	top: 20%;
+	top: 0;
 	z-index: -1;
 
 	width: 600px;
-	margin-left: -50px;
-	height: 60%;
-	border-width: 0 3px;
-
-	border-style: solid;
-	border-color: #095169;
+	margin: 0 -50px;
+	height: 100%;
 }
 
-@media all and (max-width: 640px) {
+.huggers:before, .huggers:after {
+	width: 40px;
+	height: 100%;
+	display: block;
+	margin: 0 -40px;
+
+	content: ' ';
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.huggers:before {
+	background-image: url(../img/liney-thing-left.svg);
+	float: left;
+}
+
+.huggers:after {
+	background-image: url(../img/liney-thing-right.svg);
+	float: right;
+}
+
+@media all and (max-width: 690px) {
 	.huggers {
 		display: none;
-	}
-
-	h1, h2, h3 {
-		margin-left: 0;
-		margin-right: 0;
-		border-width: 0;
-		padding-left: 0;
-		padding-right: 0;
 	}
 }
 
