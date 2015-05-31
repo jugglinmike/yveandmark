@@ -62,7 +62,7 @@ header {
 }
 
 header .monogram {
-	width: 400px;
+	width: 80%;
 	margin-bottom: 1em;
 }
 
@@ -170,5 +170,11 @@ footer img {
 		border-width: 0;
 		padding-left: 0;
 		padding-right: 0;
+	}
+}
+
+@media all and (max-width: 500px) {
+	main {
+		width: 100%;
 	}
 }
