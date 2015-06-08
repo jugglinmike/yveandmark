@@ -23,34 +23,43 @@
     </nav>
 
     <main>
-      <img src="img/engaged.png" alt="Yve and Mark, just engaged" class="photo-break">
+      <img src="img/engaged.png" alt="Yve and Mark, just engaged" class="photo-break container">
 
-      <p>Well, it has been ten years, a house, and countless adventures, but
-      she finally said &ldquo;yes,&rdquo; so Yve and Mark are happy to announce
-      that they are getting married!</p>
 
-      <section id="reception">
-        <h3>The Wedding &amp; Reception</h3>
-
-        <p>When: 4:15 on November 14, 2015</p>
-
-        <div class="photo" style="background-image: url(img/canoe-club.jpg);">
-          <img src="img/canoe-club.jpg">
-        </div>
-
-        <ul class="address">
-          <li>Canoe Club Ballroom</li>
-          <li>2 South Street</li>
-          <li>West Bridgewater, MA 02379</li>
-          <li>
-            <a href="http://www.canoeclubballroom.com">canoeclubballroom.com</a>
-          </li>
-        </ul>
+      <section class="container">
+        <span class="col1">
+          Well, it has been ten years, a house, and countless adventures, but
+          she finally said &ldquo;yes,&rdquo;
+        </span><span class="col2">
+          so Yve and Mark are happy to announce that they are getting married!
+        </span>
       </section>
 
-      <img src="img/disney.png" alt="Yve and Mark at Disney World" class="photo-break">
+      <section id="reception" style="background-image: url(img/canoe-club.jpg);">
+        <div class="container">
+          <h3>The Wedding &amp; Reception</h3>
 
-      <section id="party">
+          <span class="col1">
+          <p>When: 4:15 on November 14, 2015</p>
+
+
+          <ul class="address">
+            <li>Canoe Club Ballroom</li>
+            <li>2 South Street</li>
+            <li>West Bridgewater, MA 02379</li>
+            <li>
+              <a href="http://www.canoeclubballroom.com">canoeclubballroom.com</a>
+            </li>
+          </ul>
+          </span><span class="col2">
+            <p>This will be an <em>outdoor event</em>, weather permitting!</p>
+          </span>
+        </div>
+      </section>
+
+      <img src="img/disney.png" alt="Yve and Mark at Disney World" class="photo-break container">
+
+      <section class="container" id="party">
         <h3>The Wedding Party</h3>
 
         <div class="party party-his">
@@ -108,35 +117,40 @@
         </div>
       </section>
 
-      <img src="img/new-years.png" alt="Yve and Mark on New Year's Eve" class="photo-break">
+      <img src="img/new-years.png" alt="Yve and Mark on New Year's Eve" class="photo-break container">
 
-      <section id="hotel">
-        <h3>Hotel</h3>
+      <section id="hotel" style="background-image: url(img/hotel-map.png);">
+        <div class="container">
+          <h3>Hotel</h3>
 
-        <p>We have reserved rooms at the Residence Inn Boston. Use this link to
-        book a room:</p>
+          <span class="col1">
+          <p>We have reserved rooms at the Residence Inn Boston. Use this link to
+          book a room:</p>
 
-        <p class="external-link">
-          <a href="http://cwp.marriott.com/bosbc/obrienpenniniwedding/">
-            cwp.marriott.com/bosbc/obrienpenniniwedding/
-          </a>
-        </p>
+          <p class="external-link">
+            <a href="http://cwp.marriott.com/bosbc/obrienpenniniwedding/">
+              cwp.marriott.com/bosbc/obrienpenniniwedding/
+            </a>
+          </p>
 
-        <a class="photo" style="background-image: url(img/hotel-map.png);"
-          href="http://www.openstreetmap.org/search?query=124%20Liberty%20Street%20brockton%20massachusetts%20usa#map=16/42.0553/-71.0615">
-          <img src="img/hotel-map.png">
-        </a>
+          <ul class="address">
+            <li>124 Liberty Street</li>
+            <li>Brockton, MA 02301</li>
+            <li>508-583-3600</li>
+          </ul>
 
-        <ul class="address">
-          <li>124 Liberty Street</li>
-          <li>Brockton, MA 02301</li>
-          <li>508-583-3600</li>
-        </ul>
+        </span><span class="col2">
+		  <p>
+		    A <em>shuttle bus</em> will be available for transport between the
+            hotel and reception.
+		  </p>
+        </span>
+        </div>
       </section>
 
-      <img src="img/snow-white.png" alt="Yve and Mark with Snow White" class="photo-break">
+      <img src="img/snow-white.png" alt="Yve and Mark with Snow White" class="photo-break container">
 
-      <section id="registry">
+      <section class="container" id="registry">
         <h3>Registry</h3>
 
         <p>In case you would like to give a gift, Yve and Mark are registered
@@ -157,34 +171,6 @@
           <img src="img/monogram.svg" alt="Yve and Mark">
         </a>
       </footer>
-      <div class="huggers">&nbsp;</div>
     </main>
-
-<script>
-var huggers = document.getElementsByClassName('huggers')[0];
-var min = 300;
-var isFixed = window.scrollY < min;
-
-function placeHuggers() {
-  var fromTop = window.scrollY - min;
-  if (fromTop > 0) {
-    if (isFixed) {
-      return;
-    }
-
-    huggers.style.position = 'fixed';
-    huggers.style.top = '0px';
-    isFixed = true;
-  } else if (isFixed) {
-    huggers.style.position = 'absolute';
-    huggers.style.top = min + 'px';
-    isFixed = false;
-  }
-}
-
-placeHuggers();
-
-document.addEventListener('scroll', placeHuggers);
-</script>
   </body>
 </html>
