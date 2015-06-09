@@ -124,6 +124,10 @@ section {
 	background-position: center center;
 }
 
+section:first-of-type {
+	margin-bottom: 3em;
+}
+
 section > .container {
 	padding-top: 3em;
 	padding-bottom: 3em;
@@ -131,6 +135,10 @@ section > .container {
 
 section > .container, section > .container a {
 	color: #eee;
+}
+
+section em {
+	font-style: normal;
 }
 
 .address {
