@@ -185,28 +185,30 @@ footer img {
 	width: 200px;
 }
 
-@media all and (min-width: 800px) {
-	header .monogram {
-		width: 400px;
-	}
+/**
+ * The following styles are intended for resolutions >= 800px. They are
+ * declared without a media query to support legacy browsers.
+ */
+header .monogram {
+	width: 400px;
+}
 
-	nav {
-		font-size: 1.3em;
-	}
+nav {
+	font-size: 1.3em;
+}
 
-	.address {
-		font-size: 1.3em;
-	}
+.address {
+	font-size: 1.3em;
+}
 
-	.party li {
-		width: 45%;
-		display: inline-block;
-		vertical-align: top;
-	}
+.party li {
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+}
 
-	.party li:nth-child(2n) {
-		margin-left: 5%;
-	}
+.party li:nth-child(2n) {
+	margin-left: 5%;
 }
 
 @media all and (max-width: 800px) {
@@ -218,15 +220,23 @@ footer img {
 		width: 80%;
 	}
 
+	nav {
+		font-size: 1em;
+	}
+
+	nav li {
+		width: 45%;
+		display: inline-block;
+	}
+
 	.col1, .col2 {
 		display: inline;
 		width: auto;
 		padding: 0;
 	}
 
-	nav li {
-		width: 45%;
-		display: inline-block;
+	.address {
+		font-size: 1em;
 	}
 
 	.party ul {
@@ -235,6 +245,15 @@ footer img {
 
 	.party-hers ul {
 		margin: 0 0 0 auto;
+	}
+
+	.party li {
+		display: block;
+		width: auto;
+	}
+
+	.party li:nth-child(2n) {
+		margin-left: 0;
 	}
 }
 
