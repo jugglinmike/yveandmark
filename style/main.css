@@ -124,6 +124,14 @@ section {
 	background-position: center center;
 }
 
+section#reception {
+	background-image: url(canoe-club.jpg);
+}
+
+section#hotel {
+	background-image: url(hotel-map.png);
+}
+
 section:first-of-type {
 	margin-bottom: 3em;
 }
